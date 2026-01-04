@@ -54,10 +54,10 @@ export default function Home() {
           {/* Subtitle */}
           <div className="space-y-1 sm:space-y-2">
             <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:text-xl md:text-2xl">
-              为日常事务管理而困扰？
+              专为 ADHD 用户设计的任务管理应用
             </p>
             <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:text-xl md:text-2xl">
-              轻松保持有序，完成更多任务。
+              帮助您轻松保持有序，完成更多任务
             </p>
             <p className="mt-2 text-base font-medium text-blue-600 sm:mt-4 sm:text-lg md:text-xl dark:text-blue-400">
               立即在 iOS 和 Android 上试用测试版！
