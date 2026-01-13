@@ -1,11 +1,5 @@
 import Image from "next/image";
-import { Baloo_2 } from "next/font/google";
 import SiteNav from "../components/site-nav";
-
-const baloo = Baloo_2({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function Home() {
   return (
@@ -20,9 +14,7 @@ export default function Home() {
             <h1 className="text-xl font-bold leading-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
               提升工作效率
             </h1>
-            <h1
-              className={`${baloo.className} text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-5xl md:text-6xl lg:text-7xl dark:text-blue-400`}
-            >
+            <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-5xl md:text-6xl lg:text-7xl dark:text-blue-400">
               Blotz
             </h1>
           </div>

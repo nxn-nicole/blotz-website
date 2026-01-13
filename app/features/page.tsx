@@ -3,13 +3,6 @@
 import { useState } from "react";
 import SiteNav from "../../components/site-nav";
 
-import { Baloo_2 } from "next/font/google";
-
-const baloo = Baloo_2({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
 export default function FeaturesPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sections = [
@@ -69,11 +62,9 @@ export default function FeaturesPage() {
               >
                 Feature {activeIndex + 1}
               </div>
-              <h1
-                className={`${baloo.className} mt-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white`}
-              >
-                {activeSection.title}
-              </h1>
+            <h1 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
+              {activeSection.title}
+            </h1>
               <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg dark:text-gray-400">
                 {activeSection.description}
               </p>

@@ -1,11 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Baloo_2 } from "next/font/google";
-
-const baloo = Baloo_2({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function SiteNav() {
   return (
@@ -13,7 +7,7 @@ export default function SiteNav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pt-6">
         <Link
           href="/"
-          className={`${baloo.className} flex items-center gap-2 text-3xl font-bold text-[#9AD513]`}
+          className="flex items-center gap-2 text-3xl font-bold text-[#9AD513]"
         >
           <Image
             src="/bun-icon.png"
