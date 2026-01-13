@@ -10,7 +10,7 @@ const baloo = Baloo_2({
 export default function SiteNav() {
   return (
     <nav className="sticky top-0 z-50 bg-[#F5F9FA] backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-900">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pt-6">
         <Link
           href="/"
           className={`${baloo.className} flex items-center gap-2 text-3xl font-bold text-[#9AD513]`}
