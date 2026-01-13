@@ -5,16 +5,7 @@ export default function FeedbackPage() {
   return (
     <div className="relative min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-950">
       <SiteNav />
-      <div className="pointer-events-none absolute bottom-6 right-6 hidden md:block">
-        <Image
-          src="/bun-icon.png"
-          alt=""
-          width={600}
-          height={600}
-          className="h-auto w-80 opacity-15 dark:opacity-10"
-          aria-hidden="true"
-        />
-      </div>
+      <div className="pointer-events-none absolute bottom-6 right-6 hidden md:block"></div>
       <section className="py-20 dark:border-zinc-800 dark:bg-zinc-950">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
