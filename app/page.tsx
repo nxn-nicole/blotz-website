@@ -13,8 +13,8 @@ export default function Home() {
       <SiteNav />
 
       {/* Hero Section */}
-      <div className="flex flex-row w-full min-h-screen items-center px-20">
-        <div className="text-left sm:space-y-6 items-start">
+      <div className="mx-auto flex w-full max-w-6xl min-h-screen items-center justify-between gap-16 px-6 lg:px-20">
+        <div className="flex-1 items-start text-left sm:space-y-6 lg:-mt-36">
           {/* Main Heading */}
           <div className="sm:space-y-3">
             <h1 className="text-xl font-bold leading-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
@@ -82,7 +82,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex max-w-[520px]">
+        <div className="flex flex-1 justify-end">
           <Image
             src="/blotz-calendar-page.png"
             alt="Blotz Calendar"
