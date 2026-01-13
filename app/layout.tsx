@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Blotz - 提升工作效率",
   description: "轻松保持有序，完成更多任务。立即在 iOS 和 Android 上下载 Blotz",
+  icons: {
+    icon: "/bun-icon.png",
+  },
 };
 
 export default function RootLayout({
