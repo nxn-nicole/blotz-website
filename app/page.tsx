@@ -49,10 +49,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section
-        id="home"
-        className="flex min-h-screen items-center px-6 pt-20 pb-12 scroll-mt-24 sm:pt-24"
-      >
+      <section id="home" className="flex min-h-screen items-center px-6 pb-12">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-10 sm:gap-14 lg:grid-cols-2">
           <div className="space-y-4 text-left sm:space-y-6">
             {/* Main Heading */}
@@ -203,7 +200,7 @@ export default function Home() {
             href="https://m3cetbcyp2d.usttp.larksuite.com/share/base/form/shrutCtpZYEZ0KeRokQpJ7K96rd"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#9AD513] px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#9AD513] px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:border-2 hover:border-[#9AD513] hover:bg-transparent hover:text-[#9AD513]"
           >
             <svg
               className="h-5 w-5"
