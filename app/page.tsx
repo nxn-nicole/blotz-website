@@ -3,7 +3,7 @@ import SiteNav from "../components/site-nav";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-900">
+    <div className="min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-950">
       <SiteNav />
 
       {/* Hero Section */}
@@ -14,23 +14,23 @@ export default function Home() {
             <h1 className="text-xl font-bold leading-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
               提升工作效率
             </h1>
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-5xl md:text-6xl lg:text-7xl dark:text-blue-400">
+            <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-5xl md:text-6xl lg:text-7xl dark:text-[#9AD513]">
               Blotz
             </h1>
           </div>
 
           {/* Subtitle */}
           <div className="space-y-1 sm:space-y-2">
-            <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:text-xl md:text-2xl">
+            <p className="text-lg leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-xl md:text-2xl">
               专为 ADHD 用户设计的任务管理应用
             </p>
-            <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:text-xl md:text-2xl">
+            <p className="text-lg leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-xl md:text-2xl">
               帮助您轻松保持有序，完成更多任务
             </p>
-            <p className="mt-2 text-base font-medium text-[#9AD513] sm:mt-4 sm:text-lg md:text-xl dark:text-blue-400">
+            <p className="mt-2 text-base font-medium text-[#9AD513] sm:mt-4 sm:text-lg md:text-xl dark:text-[#9AD513]">
               立即在 iOS 和 Android 上试用测试版！
             </p>
-            <p className="text-xs text-gray-500 sm:text-sm dark:text-gray-500">
+            <p className="text-xs text-gray-500 sm:text-sm dark:text-zinc-500">
               * 当前为测试版本，欢迎反馈
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function Home() {
               href="https://www.pgyer.com/blotztask"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex w-full items-center justify-center gap-3 rounded-full border-2 border-[#9AD513] bg-white px-8 py-4 text-lg font-semibold text-[#9AD513] transition-all hover:scale-105 hover:bg-gray-50 dark:border-blue-400 dark:bg-zinc-800 dark:text-blue-400 dark:hover:bg-zinc-700 sm:w-[200px]"
+              className="group flex w-full items-center justify-center gap-3 rounded-full border-2 border-[#9AD513] bg-white px-8 py-4 text-lg font-semibold text-[#9AD513] transition-all hover:scale-105 hover:bg-gray-50 dark:border-[#9AD513] dark:bg-zinc-900 dark:text-[#9AD513] dark:hover:bg-zinc-800 sm:w-[200px]"
             >
               <Image
                 src="/android-icon.png"

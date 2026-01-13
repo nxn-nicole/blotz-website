@@ -47,28 +47,28 @@ export default function FeaturesPage() {
   const activeSection = sections[activeIndex];
 
   return (
-    <div className="min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-900">
+    <div className="min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-950">
       <SiteNav />
       <div className="mx-auto w-full max-w-6xl px-6">
-        <section className="relative overflow-hidden rounded-[32px] bg-white/70 px-8 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur lg:my-16">
+        <section className="relative overflow-hidden rounded-[32px] bg-white/70 px-8 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur lg:my-16 dark:border dark:border-zinc-800 dark:bg-zinc-900/70 dark:shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
           <div
             key={activeIndex}
             className="feature-slide flex min-h-[420px] flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-16"
           >
             <div className="max-w-xl text-left">
               <div
-                className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500"
+                className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-zinc-400"
                 style={{ borderColor: activeSection.accent }}
               >
                 Feature {activeIndex + 1}
               </div>
-            <h1 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
-              {activeSection.title}
-            </h1>
-              <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg dark:text-gray-400">
+              <h1 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
+                {activeSection.title}
+              </h1>
+              <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg dark:text-zinc-300">
                 {activeSection.description}
               </p>
-              <div className="mt-6 space-y-3 text-sm text-gray-600 sm:text-base dark:text-gray-400">
+              <div className="mt-6 space-y-3 text-sm text-gray-600 sm:text-base dark:text-zinc-300">
                 {activeSection.bullets.map((bullet) => (
                   <div key={bullet} className="flex items-start gap-3">
                     <span
@@ -82,7 +82,7 @@ export default function FeaturesPage() {
             </div>
 
             <div className="flex w-full justify-center lg:justify-end">
-              <div className="w-[240px] overflow-hidden rounded-3xl bg-white shadow-lg">
+              <div className="w-[240px] overflow-hidden rounded-3xl bg-white shadow-lg dark:bg-zinc-950 dark:shadow-[0_12px_35px_rgba(0,0,0,0.6)]">
                 <video
                   className="h-auto w-full"
                   src={activeSection.video}
@@ -100,7 +100,7 @@ export default function FeaturesPage() {
             onClick={() =>
               setActiveIndex((prev) => (prev + 1) % sections.length)
             }
-            className="absolute bottom-6 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border border-[#9AD513] bg-white text-[#9AD513] shadow-md transition hover:scale-105"
+            className="absolute bottom-6 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border border-[#9AD513] bg-white text-[#9AD513] shadow-md transition hover:scale-105 dark:bg-zinc-900 dark:shadow-[0_12px_30px_rgba(0,0,0,0.55)]"
             aria-label="Next feature"
           >
             ↓

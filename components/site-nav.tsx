@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SiteNav() {
   return (
-    <nav className="sticky top-0 z-50 bg-[#F5F9FA] backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-900">
+    <nav className="sticky top-0 z-50 border-b border-transparent bg-[#F5F9FA] backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pt-6">
         <Link
           href="/"
