@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Baloo_2, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
 
 const baloo = Baloo_2({
   variable: "--font-baloo",
@@ -31,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${baloo.className} ${baloo.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

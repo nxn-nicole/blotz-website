@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SiteNav from "../../components/site-nav";
 
 export default function FeedbackPage() {
