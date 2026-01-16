@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import SiteNav from "../../components/site-nav";
 
 export default function FeedbackPage() {
+  const t = useTranslations("feedback");
+
   return (
     <div className="relative min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-950">
       <SiteNav />
@@ -8,10 +11,10 @@ export default function FeedbackPage() {
       <section className="py-20 dark:border-zinc-800 dark:bg-zinc-950">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
-            我们想听到您的反馈！
+            {t("title")}
           </h1>
           <p className="mb-8 text-lg text-gray-600 dark:text-gray-400 sm:text-xl">
-            帮助我们改进 Blotz，分享您的想法和建议
+            {t("subtitle")}
           </p>
           <a
             href="https://m3cetbcyp2d.usttp.larksuite.com/share/base/form/shrutCtpZYEZ0KeRokQpJ7K96rd"
@@ -33,7 +36,7 @@ export default function FeedbackPage() {
                 d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
               />
             </svg>
-            <span>提交反馈</span>
+            <span>{t("button")}</span>
           </a>
         </div>
       </section>

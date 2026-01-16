@@ -1,0 +1,33 @@
+{
+  "badge": "Feature {index}",
+  "nextAriaLabel": "Next feature",
+  "sections": {
+    "calendar": {
+      "title": "Calendar Demo",
+      "description": "Describe today's plans or tasks by voice. AI understands in real time and breaks them into clear tasks and steps, organizing time details directly into your calendar. No manual typing--turn scattered ideas into actionable plans with a single sentence.",
+      "bullets": [
+        "Voice input instantly creates structured tasks",
+        "Automatically breaks down steps and fills in time",
+        "Calendar view is clear and easy to manage"
+      ]
+    },
+    "breakdown": {
+      "title": "Breakdown Smart Decomposition",
+      "description": "No more manual steps for complex tasks. Describe your goal and AI breaks it into smaller action items so you can focus on the next step.",
+      "bullets": [
+        "Large tasks are automatically split into clear steps",
+        "More reasonable priority and time suggestions",
+        "Reduce procrastination and start right away"
+      ]
+    },
+    "starSpark": {
+      "title": "Star Spark Progress Highlights",
+      "description": "Star Spark automatically aggregates all unfinished tasks, turning a backlog into a clear action list. Long-press any task to let AI estimate the time and add it to your calendar with one tap for quick scheduling. Want a bit of ritual? From Star Spark you can enter the gacha page and randomly draw a task as today's challenge, making completion easier and more fun.",
+      "bullets": [
+        "Unfinished tasks are automatically compiled into an action list",
+        "Long-press to estimate duration and add to calendar",
+        "Gacha random challenge to boost motivation"
+      ]
+    }
+  }
+}

@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import SiteNav from "../components/site-nav";
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslations("home");
+
   return (
     <div className="min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-950">
       <SiteNav />
@@ -12,26 +15,26 @@ export default function Home() {
           {/* Main Heading */}
           <div className="sm:space-y-3">
             <h1 className="text-xl font-bold leading-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
-              提升工作效率
+              {t("titleLine1")}
             </h1>
             <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-5xl md:text-6xl lg:text-7xl dark:text-[#9AD513]">
-              Blotz
+              {t("titleLine2")}
             </h1>
           </div>
 
           {/* Subtitle */}
           <div className="space-y-1 sm:space-y-2">
             <p className="text-lg leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-xl md:text-2xl">
-              专为 ADHD 用户设计的任务管理应用
+              {t("subtitleLine1")}
             </p>
             <p className="text-lg leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-xl md:text-2xl">
-              帮助您轻松保持有序，完成更多任务
+              {t("subtitleLine2")}
             </p>
             <p className="mt-2 text-base font-medium text-[#9AD513] sm:mt-4 sm:text-lg md:text-xl dark:text-[#9AD513]">
-              立即在 iOS 和 Android 上试用测试版！
+              {t("ctaLine")}
             </p>
             <p className="text-xs text-gray-500 sm:text-sm dark:text-zinc-500">
-              * 当前为测试版本，欢迎反馈
+              {t("noteLine")}
             </p>
           </div>
 
@@ -52,7 +55,7 @@ export default function Home() {
               >
                 <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
               </svg>
-              <span>iOS</span>
+              <span>{t("iosLabel")}</span>
             </a>
 
             {/* Android Download Button */}
@@ -69,7 +72,7 @@ export default function Home() {
                 height={24}
                 className="h-6 w-6"
               />
-              <span>Android</span>
+              <span>{t("androidLabel")}</span>
             </a>
           </div>
         </div>
@@ -77,7 +80,7 @@ export default function Home() {
         <div className="flex flex-1 justify-end">
           <Image
             src="/blotz-calendar-page.png"
-            alt="Blotz Calendar"
+            alt={t("imageAlt")}
             width={1040}
             height={1080}
             className="h-auto w-full rounded-3xl object-contain"

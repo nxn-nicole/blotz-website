@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import {
   DropdownMenu,
@@ -14,8 +15,10 @@ import {
 } from "@/src/components/ui/dropdown-menu";
 
 export default function SiteNav() {
-  const [language, setLanguage] = useState<"en" | "zh">("zh");
-  const languageLabel = language === "zh" ? "中文" : "English";
+  const t = useTranslations("nav");
+  const [language, setLanguage] = useState<"en" | "zh">("en");
+  const languageLabel =
+    language === "zh" ? t("language.chinese") : t("language.english");
 
   return (
     <nav className="sticky top-0 z-50 border-b border-transparent bg-[#F5F9FA] backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950">
@@ -38,19 +41,19 @@ export default function SiteNav() {
             href="/"
             className="text-base font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
           >
-            首页
+            {t("links.home")}
           </Link>
           <Link
             href="/features"
             className="text-base font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
           >
-            功能
+            {t("links.features")}
           </Link>
           <Link
             href="/feedback"
             className="text-base font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
           >
-            反馈
+            {t("links.feedback")}
           </Link>
 
           <DropdownMenu>
@@ -70,7 +73,7 @@ export default function SiteNav() {
               className="w-52 rounded-2xl border-gray-200 p-3 shadow-xl dark:border-zinc-800 bg-white"
             >
               <DropdownMenuLabel className="text-xs font-semibold uppercase tracking-wide text-gray-400 dark:text-gray-500">
-                Language
+                {t("language.label")}
               </DropdownMenuLabel>
               <DropdownMenuItem
                 className={`rounded-xl px-3 py-2 text-sm font-medium data-[highlighted]:font-semibold ${
@@ -80,7 +83,7 @@ export default function SiteNav() {
                 }`}
                 onSelect={() => setLanguage("en")}
               >
-                English
+                {t("language.english")}
               </DropdownMenuItem>
               <DropdownMenuItem
                 className={`rounded-xl px-3 py-2 text-sm font-medium data-[highlighted]:font-semibold ${
@@ -90,7 +93,7 @@ export default function SiteNav() {
                 }`}
                 onSelect={() => setLanguage("zh")}
               >
-                中文
+                {t("language.chinese")}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

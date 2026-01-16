@@ -1,0 +1,12 @@
+{
+  "links": {
+    "home": "Home",
+    "features": "Features",
+    "feedback": "Feedback"
+  },
+  "language": {
+    "label": "Site language",
+    "english": "English",
+    "chinese": "Chinese"
+  }
+}

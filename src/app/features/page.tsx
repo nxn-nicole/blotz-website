@@ -1,48 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import SiteNav from "../../components/site-nav";
 
 export default function FeaturesPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const sections = [
-    {
-      title: "Calendar 页面演示",
-      description:
-        "你可以直接用语音描述今天的安排或想做的事，AI 会实时理解并自动拆解成清晰的任务与步骤，连同时间信息一起整理进日历。无需手动输入，把零散想法变成可执行计划，一句话就能完成添加与管理。",
-      bullets: [
-        "语音输入即刻生成结构化任务",
-        "自动拆解步骤并补全时间",
-        "日历视图直观可管理",
-      ],
-      video: "/videos/calendar-page-video.mp4",
-      accent: "#9AD513",
-    },
-    {
-      title: "Breakdown 智能拆解",
-      description:
-        "复杂任务不用再手动分步骤。描述你的目标，AI 会自动拆成更小的行动项，帮助你专注下一步。",
-      bullets: [
-        "大任务自动拆分为清晰步骤",
-        "优先级与时长建议更合理",
-        "减少拖延，立即开始",
-      ],
-      video: "/videos/break-down-video.mp4",
-      accent: "#9AD513",
-    },
-    {
-      title: "Star Spark 高亮进度",
-      description:
-        "Star Spark 会自动汇总你所有未完成的任务，把“待办堆积”变成清晰的行动列表。你可以长按任意任务，让 AI 预测所需时间并一键加入日历，快速完成排期。想要一点仪式感？从 Star Spark 还能进入扭蛋机页面，随机抽取一个任务作为今天的挑战，让完成任务更轻松、更有趣。",
-      bullets: [
-        "未完成任务自动汇总成行动清单",
-        "长按任务即可预测时长并加入日历",
-        "扭蛋机随机挑战，提升完成动力",
-      ],
-      video: "/videos/star-spark-video.mp4",
-      accent: "#9AD513",
-    },
-  ];
+  const t = useTranslations("feature");
+  const sectionMeta = [
+    { key: "calendar", video: "/videos/calendar-page-video.mp4" },
+    { key: "breakdown", video: "/videos/break-down-video.mp4" },
+    { key: "starSpark", video: "/videos/star-spark-video.mp4" },
+  ] as const;
+
+  const sections = sectionMeta.map((section) => ({
+    key: section.key,
+    title: t(`sections.${section.key}.title`),
+    description: t(`sections.${section.key}.description`),
+    bullets: t.raw(`sections.${section.key}.bullets`) as string[],
+    video: section.video,
+    accent: "#9AD513",
+  }));
 
   const activeSection = sections[activeIndex];
 
@@ -60,7 +38,7 @@ export default function FeaturesPage() {
                 className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-zinc-400"
                 style={{ borderColor: activeSection.accent }}
               >
-                Feature {activeIndex + 1}
+                {t("badge", { index: activeIndex + 1 })}
               </div>
               <h1 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
                 {activeSection.title}
@@ -101,7 +79,7 @@ export default function FeaturesPage() {
               setActiveIndex((prev) => (prev + 1) % sections.length)
             }
             className="absolute bottom-6 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border border-[#9AD513] bg-white text-[#9AD513] shadow-md transition hover:scale-105 dark:bg-zinc-900 dark:shadow-[0_12px_30px_rgba(0,0,0,0.55)]"
-            aria-label="Next feature"
+            aria-label={t("nextAriaLabel")}
           >
             ↓
           </button>
