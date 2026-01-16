@@ -45,10 +45,10 @@ export default function SiteNav() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-transparent bg-[#F5F9FA] backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pt-6">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 pb-4 pt-6 sm:flex-row sm:items-center sm:justify-between sm:pb-0">
         <Link
           href="/"
-          className="flex items-center gap-2 text-3xl font-bold text-[#9AD513]"
+          className="flex items-center gap-2 text-2xl font-bold text-[#9AD513] sm:text-3xl"
         >
           <Image
             src="/bun-icon.png"
@@ -59,22 +59,22 @@ export default function SiteNav() {
           />
           Blotz
         </Link>
-        <div className="flex items-center gap-8">
+        <div className="flex w-full flex-wrap items-center justify-start gap-4 text-sm sm:w-auto sm:gap-8 sm:text-base">
           <Link
             href="/"
-            className="text-base font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+            className="font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
           >
             {t("links.home")}
           </Link>
           <Link
             href="/features"
-            className="text-base font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+            className="font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
           >
             {t("links.features")}
           </Link>
           <Link
             href="/feedback"
-            className="text-base font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+            className="font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
           >
             {t("links.feedback")}
           </Link>
