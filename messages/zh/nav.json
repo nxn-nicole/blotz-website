@@ -1,0 +1,12 @@
+{
+  "links": {
+    "home": "首页",
+    "features": "功能",
+    "feedback": "反馈"
+  },
+  "language": {
+    "label": "网站语言",
+    "english": "英文",
+    "chinese": "中文"
+  }
+}

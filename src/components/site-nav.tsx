@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 import {
   DropdownMenu,
@@ -16,9 +17,31 @@ import {
 
 export default function SiteNav() {
   const t = useTranslations("nav");
+  const router = useRouter();
   const [language, setLanguage] = useState<"en" | "zh">("en");
   const languageLabel =
     language === "zh" ? t("language.chinese") : t("language.english");
+
+  useEffect(() => {
+    const storedLocale = document.cookie
+      .split("; ")
+      .find((entry) => entry.startsWith("locale="))
+      ?.split("=")[1];
+
+    if (storedLocale === "en" || storedLocale === "zh") {
+      setLanguage(storedLocale);
+    }
+  }, []);
+
+  const setLocale = (nextLocale: "en" | "zh") => {
+    if (nextLocale === language) {
+      return;
+    }
+
+    document.cookie = `locale=${nextLocale}; path=/; max-age=31536000`;
+    setLanguage(nextLocale);
+    router.refresh();
+  };
 
   return (
     <nav className="sticky top-0 z-50 border-b border-transparent bg-[#F5F9FA] backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950">
@@ -81,7 +104,7 @@ export default function SiteNav() {
                     ? "bg-gray-50 text-gray-900 dark:bg-zinc-900 dark:text-gray-100"
                     : "text-gray-700 dark:text-gray-200"
                 }`}
-                onSelect={() => setLanguage("en")}
+                onSelect={() => setLocale("en")}
               >
                 {t("language.english")}
               </DropdownMenuItem>
@@ -91,7 +114,7 @@ export default function SiteNav() {
                     ? "bg-gray-50 text-gray-900 dark:bg-zinc-900 dark:text-gray-100"
                     : "text-gray-700 dark:text-gray-200"
                 }`}
-                onSelect={() => setLanguage("zh")}
+                onSelect={() => setLocale("zh")}
               >
                 {t("language.chinese")}
               </DropdownMenuItem>

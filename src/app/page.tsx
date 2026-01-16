@@ -14,10 +14,10 @@ export default async function Home() {
         <div className="flex-1 items-start text-left sm:space-y-6 lg:-mt-36">
           {/* Main Heading */}
           <div className="sm:space-y-3">
-            <h1 className="text-xl font-bold leading-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
+            <h1 className="text-xl font-bold leading-tight text-gray-900 pt-2 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
               {t("titleLine1")}
             </h1>
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-5xl md:text-6xl lg:text-7xl dark:text-[#9AD513]">
+            <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-3xl md:text-4xl lg:text-5xl dark:text-[#9AD513]">
               {t("titleLine2")}
             </h1>
           </div>

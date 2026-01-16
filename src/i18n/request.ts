@@ -4,6 +4,10 @@ import featureMessages from "@/messages/en/feature.json";
 import feedbackMessages from "@/messages/en/feedback.json";
 import homeMessages from "@/messages/en/home.json";
 import navMessages from "@/messages/en/nav.json";
+import featureMessagesZh from "@/messages/zh/feature.json";
+import feedbackMessagesZh from "@/messages/zh/feedback.json";
+import homeMessagesZh from "@/messages/zh/home.json";
+import navMessagesZh from "@/messages/zh/nav.json";
 
 export default getRequestConfig(async () => {
   const store = await cookies();
@@ -14,6 +18,12 @@ export default getRequestConfig(async () => {
       feedback: feedbackMessages,
       home: homeMessages,
       nav: navMessages,
+    },
+    zh: {
+      feature: featureMessagesZh,
+      feedback: feedbackMessagesZh,
+      home: homeMessagesZh,
+      nav: navMessagesZh,
     },
   } as const;
 
