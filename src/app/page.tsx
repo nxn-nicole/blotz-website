@@ -10,24 +10,24 @@ export default async function Home() {
       <SiteNav />
 
       {/* Hero Section */}
-      <div className="mx-auto flex w-full max-w-6xl min-h-screen items-center justify-between gap-16 px-6 lg:px-20">
-        <div className="flex-1 items-start text-left sm:space-y-6 lg:-mt-36">
+      <div className="mx-auto flex w-full max-w-6xl flex-col-reverse items-center gap-10 px-6 pb-16 pt-10 lg:min-h-screen lg:flex-row lg:justify-between lg:gap-16 lg:px-20">
+        <div className="flex w-full flex-1 flex-col items-center text-center sm:space-y-6 lg:-mt-36 lg:items-start lg:text-left">
           {/* Main Heading */}
           <div className="sm:space-y-3">
-            <h1 className="text-xl font-bold leading-tight text-gray-900 pt-2 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
+            <h1 className="pt-2 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
               {t("titleLine1")}
             </h1>
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-3xl md:text-4xl lg:text-5xl dark:text-[#9AD513]">
+            <h1 className="text-4xl font-bold leading-tight tracking-tight text-[#9AD513] sm:text-5xl md:text-6xl lg:text-7xl dark:text-[#9AD513]">
               {t("titleLine2")}
             </h1>
           </div>
 
           {/* Subtitle */}
           <div className="space-y-1 sm:space-y-2">
-            <p className="text-lg leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-xl md:text-2xl">
+            <p className="text-base leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-lg md:text-xl">
               {t("subtitleLine1")}
             </p>
-            <p className="text-lg leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-xl md:text-2xl">
+            <p className="text-base leading-relaxed text-gray-600 dark:text-zinc-300 sm:text-lg md:text-xl">
               {t("subtitleLine2")}
             </p>
             <p className="mt-2 text-base font-medium text-[#9AD513] sm:mt-4 sm:text-lg md:text-xl dark:text-[#9AD513]">
@@ -39,7 +39,7 @@ export default async function Home() {
           </div>
 
           {/* Download Buttons */}
-          <div className="flex flex-col items-start gap-3 pt-2 sm:gap-4 sm:pt-4 sm:flex-row">
+          <div className="flex flex-col items-center gap-3 pt-4 sm:flex-row sm:items-start sm:gap-4">
             {/* iOS Download Button */}
             <a
               href="https://testflight.apple.com/join/juXbBxHN"
@@ -77,13 +77,13 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="flex flex-1 justify-end">
+        <div className="flex w-full flex-1 justify-center lg:justify-end">
           <Image
             src="/blotz-calendar-page.png"
             alt={t("imageAlt")}
             width={1040}
             height={1080}
-            className="h-auto w-full rounded-3xl object-contain"
+            className="h-auto w-full max-w-md rounded-3xl object-contain sm:max-w-lg lg:max-w-none"
             priority
           />
         </div>
