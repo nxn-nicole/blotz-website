@@ -1,11 +1,23 @@
 {
   "titleLine1": "Boost your productivity",
   "titleLine2": "Blotz",
+  "metadataTitle": "Blotz - Boost Your Productivity",
+  "metadataDescription": "Stay organized with less effort and get more done. Download Blotz on iOS and Android today!",
   "subtitleLine1": "A task manager designed for ADHD users",
   "subtitleLine2": "Stay organized with less effort and get more done",
   "ctaLine": "Try the beta on iOS and Android today!",
   "noteLine": "* Beta build, feedback welcome",
   "iosLabel": "iOS",
   "androidLabel": "Android",
-  "imageAlt": "Blotz Calendar"
+  "imageAlt": "Blotz Calendar",
+  "whyBlotzTitle": "Designed for your brain",
+  "whyBlotzSubtitle": "We built Blotz specifically to help neurodivergent minds stay on track without the overwhelm.",
+  "benefit1Title": "Voice-First Entry",
+  "benefit1Desc": "Just talk to Blotz. We'll turn your scattered thoughts into organized tasks.",
+  "benefit2Title": "Smart Breakdown",
+  "benefit2Desc": "Large tasks are automatically split into manageable steps to reduce procrastination.",
+  "benefit3Title": "Visual Clarity",
+  "benefit3Desc": "A clean, high-contrast interface designed to minimize cognitive load and distractions.",
+  "finalCta": "Ready to master your day?",
+  "finalCtaSub": "Join thousands of users improving their focus with Blotz."
 }

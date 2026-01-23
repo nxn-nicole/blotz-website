@@ -1,11 +1,23 @@
 {
   "titleLine1": "提升工作效率",
   "titleLine2": "Blotz",
+  "metadataTitle": "Blotz - 提升工作效率",
+  "metadataDescription": "轻松保持有序，完成更多任务。立即在 iOS 和 Android 上下载 Blotz",
   "subtitleLine1": "专为 ADHD 用户设计的任务管理应用",
   "subtitleLine2": "帮助您轻松保持有序，完成更多任务",
   "ctaLine": "立即在 iOS 和 Android 上试用测试版！",
   "noteLine": "* 当前为测试版本，欢迎反馈",
   "iosLabel": "iOS",
   "androidLabel": "Android",
-  "imageAlt": "Blotz 日历"
+  "imageAlt": "Blotz 日历",
+  "whyBlotzTitle": "为您的大脑量身打造",
+  "whyBlotzSubtitle": "我们专门为 ADHD 用户设计了 Blotz，帮助您在不感到负担的情况下保持专注。",
+  "benefit1Title": "语音优先输入",
+  "benefit1Desc": "只需对 Blotz 说话，我们将把您零散的想法转化为井井有条的任务。",
+  "benefit2Title": "智能拆解",
+  "benefit2Desc": "大任务会自动拆解为易于处理的小步骤，有效减少拖延。",
+  "benefit3Title": "视觉清晰",
+  "benefit3Desc": "简洁、高对比度的界面设计，旨在最大限度地减少认知负荷和干扰。",
+  "finalCta": "准备好掌控您的一天了吗？",
+  "finalCtaSub": "加入成千上万使用 Blotz 提升专注力的用户行列。"
 }
