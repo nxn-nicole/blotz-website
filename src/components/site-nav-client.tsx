@@ -33,39 +33,45 @@ export default function SiteNavClient({ initialLocale }: Props) {
 
   return (
     <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 transition-all duration-500 rounded-full border border-white/40 shadow-2xl ${
+      className={`fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 transition-all duration-500 rounded-full border border-zinc-200/50 shadow-premium ${
         scrolled
-          ? "glass bg-white/25 backdrop-blur-2xl py-0"
-          : "glass bg-white/20 backdrop-blur-xl py-0"
+          ? "bg-white/95 backdrop-blur-2xl py-0"
+          : "bg-white/90 backdrop-blur-xl py-0"
       }`}
     >
-      <div className="px-6 lg:px-10">
-        <div className="flex items-center justify-between h-16">
+      <div className="px-6 lg:px-8">
+        <div className="flex items-center justify-between h-[52px]">
           {/* Logo */}
           <Link
             href="/"
-            className="text-[32px] font-extrabold tracking-tight text-white drop-shadow-md hover:opacity-80 transition-all duration-300"
+            className="text-[24px] font-black tracking-tight text-primary hover:scale-105 active:scale-95 transition-all duration-200 flex items-center"
           >
             Blotz
           </Link>
 
           {/* Right side */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-6">
             {/* Nav links */}
-            <div className="hidden sm:flex items-center gap-8">
+            <div className="hidden sm:flex items-center gap-2">
               <Link
                 href="/features"
-                className="group relative text-[18px] font-extrabold tracking-tight text-white drop-shadow-md transition-all"
+                className={`px-4 py-1.5 rounded-full transition-all duration-200 hover:bg-primary/10 hover:text-primary hover:scale-105 active:scale-95 ${
+                  language === "zh" 
+                    ? "text-[16px] font-bold tracking-normal text-zinc-800 chinese-text" 
+                    : "font-mono text-[14px] uppercase font-bold tracking-tight text-zinc-800"
+                }`}
               >
                 {t("links.features")}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
               <Link
                 href="/feedback"
-                className="group relative text-[18px] font-extrabold tracking-tight text-white drop-shadow-md transition-all"
+                className={`px-4 py-1.5 rounded-full transition-all duration-200 hover:bg-primary/10 hover:text-primary hover:scale-105 active:scale-95 ${
+                  language === "zh" 
+                    ? "text-[16px] font-bold tracking-normal text-zinc-800 chinese-text" 
+                    : "font-mono text-[14px] uppercase font-bold tracking-tight text-zinc-800"
+                }`}
               >
                 {t("links.feedback")}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
             </div>
 
@@ -73,11 +79,13 @@ export default function SiteNavClient({ initialLocale }: Props) {
             <button
               type="button"
               onClick={toggleLocale}
-              className="flex items-center gap-2 px-4 py-2 text-[12px] font-extrabold uppercase tracking-widest text-white bg-white/25 hover:bg-white/40 rounded-full border border-white/20 backdrop-blur-md transition-all active:scale-95 hover:border-white/50 shadow-md"
+              className="flex items-center gap-2 px-4 py-1.5 font-mono text-[11px] font-black uppercase tracking-widest text-white bg-primary hover:brightness-110 hover:scale-105 hover:shadow-lg hover:shadow-primary/40 rounded-full transition-all duration-200 active:scale-95 border border-primary/20 shadow-md shadow-primary/30"
               title={t("language.label")}
             >
-              <Globe className="h-4 w-4" />
-              <span>{language === "en" ? "EN" : "中文"}</span>
+              <Globe className="h-4 w-4 text-white" />
+              <span className={language === "zh" ? "text-[13px] tracking-normal font-bold chinese-text" : ""}>
+                {language === "en" ? "EN" : "中文"}
+              </span>
             </button>
           </div>
         </div>
