@@ -6,7 +6,7 @@ import { getLocale, getMessages, getTranslations } from "next-intl/server";
 const baloo = Baloo_2({
   variable: "--font-baloo",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const geistMono = Geist_Mono({
