@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import SiteNav from "../components/site-nav";
 import ScrollReveal from "../components/scroll-reveal";
+import { FaAndroid, FaApple } from "react-icons/fa";
 
 export default async function Home() {
   const t = await getTranslations("home");
@@ -29,42 +30,34 @@ export default async function Home() {
 
         <div className="max-w-4xl mx-auto px-6 lg:px-12 w-full relative z-10 text-center">
           <div className="text-white">
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black leading-[1.1] mb-8 drop-shadow-sm">
+            <h1 className="text-[42px] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-8xl 2xl:text-[92px] font-black leading-[1.08] sm:leading-[1.08] md:leading-[1.06] lg:leading-[1.06] mb-6 sm:mb-7 drop-shadow-sm">
               {t("titleLine1")}
               <br />
               <span className="text-white/90">{t("titleLine2")}</span>
             </h1>
             
-            <p className="text-xl sm:text-2xl font-medium opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl font-medium opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
               {t("subtitleLine1")} {t("subtitleLine2")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="https://testflight.apple.com/join/juXbBxHN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 h-16 px-10 bg-white text-primary font-bold rounded-2xl hover:scale-105 transition-all shadow-[0_20px_50px_-10px_rgba(0,0,0,0.2)] text-lg active:scale-95"
+                className="inline-flex items-center justify-center gap-3 w-[200px] h-[60px] bg-white text-primary rounded-2xl hover:scale-[1.03] transition-all duration-300 shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] active:scale-95 group"
               >
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                </svg>
-                {t("iosTestButton")}
+                <FaApple className="text-[22px] leading-none shrink-0 transition-transform group-hover:-translate-y-0.5" />
+                <span className="text-[18px] font-black tracking-tight">App Store</span>
               </a>
               <a
                 href="https://www.pgyer.com/blotztask"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass inline-flex items-center justify-center gap-3 h-16 px-10 text-white font-bold rounded-2xl hover:bg-white/20 hover:scale-105 transition-all text-lg active:scale-95"
+                className="inline-flex items-center justify-center gap-3 w-[200px] h-[60px] bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-2xl hover:bg-white/30 hover:scale-[1.03] transition-all duration-300 shadow-lg active:scale-95 group"
               >
-                <Image
-                  src="/android-icon.png"
-                  alt="Android"
-                  width={24}
-                  height={24}
-                  className="h-6 w-6 invert"
-                />
-                {t("androidTestButton")}
+                <FaAndroid className="text-[22px] leading-none shrink-0 transition-transform group-hover:-translate-y-0.5" />
+                <span className="text-[18px] font-black tracking-tight">Android</span>
               </a>
             </div>
           </div>
@@ -98,17 +91,17 @@ export default async function Home() {
 
             <div className="order-1 lg:order-2 text-center lg:text-left">
               <ScrollReveal>
-                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider">
                   {t("feature1Label")}
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <h2 className="text-3xl sm:text-4xl font-black tracking-tight mt-3 mb-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 sm:mt-3 mb-3 sm:mb-4">
                   {t("feature1Title")}
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
                   {t("feature1Description")}
                 </p>
               </ScrollReveal>
@@ -123,17 +116,17 @@ export default async function Home() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center lg:text-left">
               <ScrollReveal>
-                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider">
                   {t("feature2Label")}
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <h2 className="text-3xl sm:text-4xl font-black tracking-tight mt-3 mb-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 sm:mt-3 mb-3 sm:mb-4">
                   {t("feature2Title")}
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
                   {t("feature2Description")}
                 </p>
               </ScrollReveal>
@@ -170,24 +163,24 @@ export default async function Home() {
 
             <div className="order-1 lg:order-2 text-center lg:text-left">
               <ScrollReveal>
-                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider">
                   {t("feature3Label")}
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <h2 className="text-3xl sm:text-4xl font-black tracking-tight mt-3 mb-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 sm:mt-3 mb-3 sm:mb-4">
                   {t("feature3Title")}
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0 mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0 mb-4 sm:mb-6">
                   {t("feature3Description")}
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <a
                   href="/features"
-                  className="inline-flex items-center gap-2 font-medium text-primary hover:underline"
+                  className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-primary hover:underline"
                 >
                   {t("learnMoreLink")} →
                 </a>
