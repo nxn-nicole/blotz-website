@@ -2,6 +2,7 @@
 
 import { Globe } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -44,8 +45,9 @@ export default function SiteNavClient({ initialLocale }: Props) {
           {/* Logo */}
           <Link
             href="/"
-            className="text-[20px] sm:text-[24px] font-black tracking-tight text-primary hover:scale-105 active:scale-95 transition-all duration-300 flex items-center"
+            className="text-2xl sm:text-3xl font-black tracking-tight text-gradient-primary hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
           >
+            <Image src="/bun-icon.png" alt="Blotz" width={28} height={28} className="h-7 w-7" />
             Blotz
           </Link>
 
@@ -53,37 +55,43 @@ export default function SiteNavClient({ initialLocale }: Props) {
           <div className="flex items-center gap-3 sm:gap-6">
             {/* Nav links */}
             <div className="hidden sm:flex items-center gap-2">
-              <Link
-                href="/features"
-                className={`px-2 py-1 transition-all duration-300 hover:text-primary hover:scale-105 active:scale-95 ${
-                  language === "zh" 
-                    ? "text-[16px] font-bold tracking-normal chinese-text" 
-                    : "font-mono text-[14px] uppercase font-bold tracking-tight"
-                } text-zinc-800`}
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('features')?.scrollIntoView({behavior: 'smooth'});
+                }}
+                className={`px-2 py-1 transition-all duration-300 hover:text-secondary hover:scale-105 active:scale-95 ${
+                  language === "zh"
+                    ? "text-base font-bold tracking-normal chinese-text"
+                    : "font-mono text-sm uppercase font-bold tracking-tight"
+                } text-zinc-800 bg-none border-none cursor-pointer`}
               >
                 {t("links.features")}
-              </Link>
-              <Link
-                href="/feedback"
-                className={`px-2 py-1 transition-all duration-300 hover:text-primary hover:scale-105 active:scale-95 ${
-                  language === "zh" 
-                    ? "text-[16px] font-bold tracking-normal chinese-text" 
-                    : "font-mono text-[14px] uppercase font-bold tracking-tight"
-                } text-zinc-800`}
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('feedback')?.scrollIntoView({behavior: 'smooth'});
+                }}
+                className={`px-2 py-1 transition-all duration-300 hover:text-secondary hover:scale-105 active:scale-95 ${
+                  language === "zh"
+                    ? "text-base font-bold tracking-normal chinese-text"
+                    : "font-mono text-sm uppercase font-bold tracking-tight"
+                } text-zinc-800 bg-none border-none cursor-pointer`}
               >
                 {t("links.feedback")}
-              </Link>
+              </button>
             </div>
 
             {/* Language toggle */}
             <button
               type="button"
               onClick={toggleLocale}
-              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 font-mono text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-white bg-primary hover:brightness-110 hover:scale-105 rounded-full transition-all duration-300 active:scale-95 border border-primary/20 shadow-sm hover:shadow-md shadow-primary/20"
+              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 font-mono text-xs font-black uppercase tracking-widest text-white bg-gradient-primary-horizontal hover:scale-105 rounded-full transition-all duration-300 active:scale-95 border-0 shadow-gradient"
               title={t("language.label")}
             >
               <Globe className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
-              <span className={language === "zh" ? "text-[12px] sm:text-[13px] tracking-normal font-bold chinese-text" : ""}>
+              <span className={language === "zh" ? "text-sm tracking-normal font-bold chinese-text" : ""}>
                 {language === "en" ? "EN" : "中文"}
               </span>
             </button>

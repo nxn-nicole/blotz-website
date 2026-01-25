@@ -32,14 +32,14 @@ export default function FeaturesPage() {
       <main className="mx-auto max-w-7xl px-6 lg:px-8 py-20 sm:py-32">
         <div className="mx-auto max-w-2xl text-center mb-20">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6">
-            The power of <span className="text-primary italic">AI</span> in your hands
+            The power of <span className="text-gradient-primary italic font-black">AI</span> in your hands
           </h1>
           <p className="text-lg text-muted-foreground">
             Explore how Blotz uses advanced AI to transform the way you plan, work, and focus.
           </p>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-16">
           {sectionMeta.map((section, index) => {
             const Icon = section.icon;
             const isEven = index % 2 === 0;
@@ -47,11 +47,11 @@ export default function FeaturesPage() {
             return (
               <section 
                 key={section.key}
-                className={`flex flex-col lg:flex-row gap-12 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}
+                className={`flex flex-col lg:flex-row gap-8 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}
               >
                 {/* Text Content */}
                 <div className="flex-1 space-y-8">
-                  <div className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold glass border-primary/20 text-primary`}>
+                  <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold bg-gradient-primary-horizontal text-white border-0">
                     <Icon className="h-4 w-4" />
                     {t("badge", { index: index + 1 })}
                   </div>
@@ -67,14 +67,14 @@ export default function FeaturesPage() {
                   <ul className="space-y-4">
                     {(t.raw(`sections.${section.key}.bullets`) as string[]).map((bullet, i) => (
                       <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                        <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                        <div className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${i % 2 === 0 ? 'bg-primary' : 'bg-secondary'}`} />
                         <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <button className="flex items-center gap-2 text-primary font-bold group">
-                    Learn more about this feature 
+                  <button className="flex items-center gap-2 font-bold text-gradient-primary group">
+                    Learn more about this feature
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
@@ -113,7 +113,7 @@ export default function FeaturesPage() {
                 href="https://testflight.apple.com/join/juXbBxHN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-bold shadow-lg shadow-primary/20 transition-all hover:scale-105"
+                className="bg-gradient-primary-horizontal text-white px-8 py-4 rounded-2xl font-bold shadow-gradient transition-all hover:scale-105"
               >
                 Join iOS Beta
               </a>
@@ -121,7 +121,7 @@ export default function FeaturesPage() {
                 href="https://www.pgyer.com/blotztask"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass border-primary/20 px-8 py-4 rounded-2xl font-bold transition-all hover:scale-105"
+                className="bg-gradient-primary-horizontal text-white px-8 py-4 rounded-2xl font-bold shadow-gradient transition-all hover:scale-105"
               >
                 Download Android
               </a>

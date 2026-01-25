@@ -16,6 +16,8 @@
   "heroFeature2": "AI breakdown — split big tasks into small steps",
   "heroFeature3": "Gamified rewards — earn stars, stay motivated",
   "scrollText": "Scroll to explore",
+  "featuresTitle": "Powerful Features",
+  "featuresSubtitle": "Everything you need to stay organized and productive",
   "feature1Label": "Voice Input",
   "feature1Title": "Voice to tasks in seconds",
   "feature1Description": "Just speak your thoughts. Blotz uses AI to instantly organize them into clear, actionable tasks—no typing, no stress.",
@@ -24,5 +26,8 @@
   "feature2Description": "Complete tasks to earn stars and spin the gashapon machine. Unlock rewards and keep your momentum going with fun surprises.",
   "feature3Label": "AI Powered",
   "feature3Title": "Break down big tasks",
-  "feature3Description": "Feeling overwhelmed? Let AI split large tasks into smaller, manageable steps so you can start without the stress."
+  "feature3Description": "Feeling overwhelmed? Let AI split large tasks into smaller, manageable steps so you can start without the stress.",
+  "feedbackTitle": "We Want to Hear from You",
+  "feedbackSubtitle": "Help us improve Blotz by sharing your ideas and feedback. Your input shapes the future of AI-powered task management.",
+  "feedbackButton": "Share Your Feedback"
 }

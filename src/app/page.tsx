@@ -12,13 +12,15 @@ export default async function Home() {
       <SiteNav />
 
       {/* ==================== HERO ==================== */}
-      <section className="min-h-screen flex items-center bg-linear-to-br from-primary via-primary to-[#86C200] overflow-hidden relative">
+      <section className="min-h-screen flex items-center bg-gradient-to-br from-primary via-[#6BBF00] to-secondary overflow-hidden relative">
         {/* Decorative Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-[15%] left-[10%] w-12 h-12 bg-white/10 rounded-xl rotate-12 animate-float opacity-40 backdrop-blur-sm border border-white/20" />
           <div className="absolute top-[25%] right-[15%] w-16 h-16 bg-white/15 rounded-full animate-float opacity-30 backdrop-blur-sm border border-white/20 [animation-delay:1s]" />
           <div className="absolute bottom-[30%] left-[20%] w-10 h-10 bg-white/10 rounded-lg -rotate-12 animate-float opacity-40 backdrop-blur-sm border border-white/20 [animation-delay:2s]" />
           <div className="absolute top-[60%] right-[10%] w-14 h-14 bg-white/10 rounded-2xl rotate-45 animate-float opacity-30 backdrop-blur-sm border border-white/20 [animation-delay:1.5s]" />
+          <div className="absolute bottom-[40%] right-[20%] w-12 h-12 bg-secondary/10 rounded-full animate-float opacity-35 backdrop-blur-sm border border-secondary/20 [animation-delay:0.8s]" />
+          <div className="absolute top-[45%] left-[25%] w-10 h-10 bg-secondary/10 rounded-lg rotate-12 animate-float opacity-30 backdrop-blur-sm border border-secondary/20 [animation-delay:2.5s]" />
           
           {/* Abstract background lines/waves */}
           <svg className="w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -30,163 +32,192 @@ export default async function Home() {
 
         <div className="max-w-4xl mx-auto px-6 lg:px-12 w-full relative z-10 text-center">
           <div className="text-white">
-            <h1 className="text-[42px] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-8xl 2xl:text-[92px] font-black leading-[1.08] sm:leading-[1.08] md:leading-[1.06] lg:leading-[1.06] mb-6 sm:mb-7 drop-shadow-sm">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] sm:leading-[1.08] md:leading-[1.06] lg:leading-[1.06] mb-4 sm:mb-6 drop-shadow-sm">
               {t("titleLine1")}
               <br />
               <span className="text-white/90">{t("titleLine2")}</span>
             </h1>
             
-            <p className="text-lg sm:text-xl lg:text-2xl font-medium opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+            <p className="text-xs sm:text-sm lg:text-base font-medium opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
               {t("subtitleLine1")} {t("subtitleLine2")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
               <a
                 href="https://testflight.apple.com/join/juXbBxHN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 w-[200px] h-[60px] bg-white text-primary rounded-2xl hover:scale-[1.03] transition-all duration-300 shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] active:scale-95 group"
+                className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-primary rounded-3xl font-black shadow-xl active:scale-95 group btn-hover-glow hover:shadow-2xl transition-all border-2 border-white"
               >
-                <FaApple className="text-[22px] leading-none shrink-0 transition-transform group-hover:-translate-y-0.5" />
-                <span className="text-[18px] font-black tracking-tight">App Store</span>
+                <FaApple className="text-2xl leading-none shrink-0 transition-transform group-hover:-translate-y-1" />
+                <span className="text-lg font-black tracking-tight">App Store</span>
               </a>
               <a
                 href="https://www.pgyer.com/blotztask"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 w-[200px] h-[60px] bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-2xl hover:bg-white/30 hover:scale-[1.03] transition-all duration-300 shadow-lg active:scale-95 group"
+                className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-primary rounded-3xl font-black shadow-xl active:scale-95 group btn-hover-glow hover:shadow-2xl transition-all border-2 border-white"
               >
-                <FaAndroid className="text-[22px] leading-none shrink-0 transition-transform group-hover:-translate-y-0.5" />
-                <span className="text-[18px] font-black tracking-tight">Android</span>
+                <FaAndroid className="text-2xl leading-none shrink-0 transition-transform group-hover:-translate-y-1" />
+                <span className="text-lg font-black tracking-tight">Android</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Layered wave decoration */}
-        <div className="absolute bottom-0 left-0 w-full leading-0">
-          <svg className="relative block w-full h-[60px] lg:h-[120px] opacity-50" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.23,113.13,145.51,122.36,213.08,107.82,282.6,92.83,321.39,56.44,321.39,56.44Z" fill="white"></path>
-          </svg>
-          <svg className="absolute bottom-0 left-0 w-full h-[50px] lg:h-[100px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.23,113.13,145.51,122.36,213.08,107.82,282.6,92.83,321.39,56.44,321.39,56.44Z" fill="white"></path>
-          </svg>
-        </div>
+        {/* Flat bottom decoration */}
+        <div className="absolute bottom-0 left-0 w-full h-[40px] bg-white"></div>
       </section>
 
-      {/* ==================== FEATURE 1 ==================== */}
-      <section className="py-16 lg:py-24 bg-muted/40">
+      {/* ==================== FEATURES ==================== */}
+      <section id="features" className="py-12 lg:py-20 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <ScrollReveal animation="scale" className="order-2 lg:order-1 flex justify-center">
-              <video
-                src="/videos/calendar-page-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full max-w-[260px] sm:max-w-[280px] h-auto rounded-4xl shadow-xl"
-              />
+          <div className="text-center mb-12">
+            <ScrollReveal>
+              <h2 className="text-4xl sm:text-5xl font-black mb-4">
+                {t("featuresTitle") || "Powerful Features"}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {t("featuresSubtitle") || "Everything you need to stay organized and productive"}
+              </p>
+            </ScrollReveal>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Feature Card 1 */}
+            <ScrollReveal animation="scale">
+              <div className="group relative h-full bg-white rounded-3xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="mb-3">
+                    <span className="inline-block px-3 py-1 bg-gradient-primary-horizontal text-white text-xs font-bold rounded-full">
+                      {t("feature1Label")}
+                    </span>
+                  </div>
+
+                  <div className="mb-4 overflow-hidden rounded-2xl bg-gray-100">
+                    <video
+                      src="/videos/calendar-page-video.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-96 object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  <h3 className="text-base font-black mb-2 text-foreground">
+                    {t("feature1Title")}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground flex-grow leading-relaxed">
+                    {t("feature1Description")}
+                  </p>
+                </div>
+              </div>
             </ScrollReveal>
 
-            <div className="order-1 lg:order-2 text-center lg:text-left">
-              <ScrollReveal>
-                <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider">
-                  {t("feature1Label")}
-                </span>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 sm:mt-3 mb-3 sm:mb-4">
-                  {t("feature1Title")}
-                </h2>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
-                  {t("feature1Description")}
-                </p>
-              </ScrollReveal>
-            </div>
+            {/* Feature Card 2 */}
+            <ScrollReveal animation="scale" delay={100}>
+              <div className="group relative h-full bg-white rounded-3xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="mb-3">
+                    <span className="inline-block px-3 py-1 bg-gradient-primary-horizontal text-white text-xs font-bold rounded-full">
+                      {t("feature2Label")}
+                    </span>
+                  </div>
+
+                  <div className="mb-6 overflow-hidden rounded-2xl">
+                    <video
+                      src="/videos/star-spark-video.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+
+                  <h3 className="text-base font-black mb-2 text-foreground">
+                    {t("feature2Title")}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground flex-grow leading-relaxed">
+                    {t("feature2Description")}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Feature Card 3 */}
+            <ScrollReveal animation="scale" delay={200}>
+              <div className="group relative h-full bg-white rounded-3xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="mb-3">
+                    <span className="inline-block px-3 py-1 bg-gradient-primary-horizontal text-white text-xs font-bold rounded-full">
+                      {t("feature3Label")}
+                    </span>
+                  </div>
+
+                  <div className="mb-6 overflow-hidden rounded-2xl">
+                    <video
+                      src="/videos/break-down-video.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+
+                  <h3 className="text-base font-black mb-2 text-foreground">
+                    {t("feature3Title")}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground flex-grow leading-relaxed">
+                    {t("feature3Description")}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* ==================== FEATURE 2 ==================== */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="text-center lg:text-left">
-              <ScrollReveal>
-                <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider">
-                  {t("feature2Label")}
-                </span>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 sm:mt-3 mb-3 sm:mb-4">
-                  {t("feature2Title")}
-                </h2>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
-                  {t("feature2Description")}
-                </p>
-              </ScrollReveal>
-            </div>
-
-            <ScrollReveal animation="scale" className="flex justify-center">
-              <video
-                src="/videos/star-spark-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full max-w-[260px] sm:max-w-[280px] h-auto rounded-4xl shadow-xl"
-              />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ==================== FEATURE 3 ==================== */}
-      <section className="py-16 lg:py-24 bg-muted/40">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <ScrollReveal animation="scale" className="order-2 lg:order-1 flex justify-center">
-              <video
-                src="/videos/break-down-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full max-w-[260px] sm:max-w-[280px] h-auto rounded-4xl shadow-xl"
-              />
-            </ScrollReveal>
-
-            <div className="order-1 lg:order-2 text-center lg:text-left">
-              <ScrollReveal>
-                <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider">
-                  {t("feature3Label")}
-                </span>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 sm:mt-3 mb-3 sm:mb-4">
-                  {t("feature3Title")}
-                </h2>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0 mb-4 sm:mb-6">
-                  {t("feature3Description")}
-                </p>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <a
-                  href="/features"
-                  className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-primary hover:underline"
-                >
-                  {t("learnMoreLink")} →
-                </a>
-              </ScrollReveal>
-            </div>
-          </div>
+      {/* ==================== FEEDBACK ==================== */}
+      <section id="feedback" className="py-12 lg:py-20 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+              {t("feedbackTitle")}
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <p className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
+              {t("feedbackSubtitle")}
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <a
+              href="https://m3cetbcyp2d.usttp.larksuite.com/share/base/form/shrutCtpZYEZ0KeRokQpJ7K96rd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-primary-horizontal text-white rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 btn-hover-glow"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              {t("feedbackButton")}
+            </a>
+          </ScrollReveal>
         </div>
       </section>
 
