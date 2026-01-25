@@ -5,22 +5,22 @@ export default function FeedbackPage() {
   const t = useTranslations("feedback");
 
   return (
-    <div className="relative min-h-screen bg-[#F5F9FA] font-sans dark:bg-zinc-950">
+    <div className="relative min-h-screen font-sans">
       <SiteNav />
       <div className="pointer-events-none absolute bottom-6 right-6 hidden md:block"></div>
-      <section className="py-20 dark:border-zinc-800 dark:bg-zinc-950">
+      <section className="py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
+          <h1 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">
             {t("title")}
           </h1>
-          <p className="mb-8 text-lg text-gray-600 dark:text-gray-400 sm:text-xl">
+          <p className="mb-8 text-lg text-muted-foreground sm:text-xl">
             {t("subtitle")}
           </p>
           <a
             href="https://m3cetbcyp2d.usttp.larksuite.com/share/base/form/shrutCtpZYEZ0KeRokQpJ7K96rd"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#9AD513] px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:border-2 hover:border-[#9AD513] hover:bg-transparent hover:text-[#9AD513]"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition-all hover:scale-105 hover:bg-primary/90"
           >
             <svg
               className="h-5 w-5"
