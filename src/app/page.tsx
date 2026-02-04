@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import SiteNav from "../components/site-nav";
 import ScrollReveal from "../components/scroll-reveal";
@@ -228,7 +229,15 @@ export default async function Home() {
             <Image src="/bun-icon.png" alt="Blotz" width={20} height={20} className="h-5 w-5" />
             Blotz
           </div>
-          <p className="text-sm text-muted-foreground">© 2026 Blotz</p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy-policy"
+              className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <p className="text-sm text-muted-foreground">© 2026 Blotz</p>
+          </div>
         </div>
       </footer>
     </div>

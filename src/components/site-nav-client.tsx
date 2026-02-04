@@ -4,7 +4,7 @@ import { Globe } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 type Props = {
@@ -14,6 +14,7 @@ type Props = {
 export default function SiteNavClient({ initialLocale }: Props) {
   const t = useTranslations("nav");
   const router = useRouter();
+  const pathname = usePathname();
   const [language, setLanguage] = useState<"en" | "zh">(initialLocale);
   const [scrolled, setScrolled] = useState(false);
 
@@ -55,10 +56,13 @@ export default function SiteNavClient({ initialLocale }: Props) {
           <div className="flex items-center gap-3 sm:gap-6">
             {/* Nav links */}
             <div className="hidden sm:flex items-center gap-2">
-              <button
+              <Link
+                href="/#features"
                 onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('features')?.scrollIntoView({behavior: 'smooth'});
+                  if (pathname === "/") {
+                    e.preventDefault();
+                    document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
+                  }
                 }}
                 className={`px-2 py-1 transition-all duration-300 hover:text-secondary hover:scale-105 active:scale-95 ${
                   language === "zh"
@@ -67,11 +71,14 @@ export default function SiteNavClient({ initialLocale }: Props) {
                 } text-zinc-800 bg-none border-none cursor-pointer`}
               >
                 {t("links.features")}
-              </button>
-              <button
+              </Link>
+              <Link
+                href="/#feedback"
                 onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('feedback')?.scrollIntoView({behavior: 'smooth'});
+                  if (pathname === "/") {
+                    e.preventDefault();
+                    document.getElementById("feedback")?.scrollIntoView({ behavior: "smooth" });
+                  }
                 }}
                 className={`px-2 py-1 transition-all duration-300 hover:text-secondary hover:scale-105 active:scale-95 ${
                   language === "zh"
@@ -80,7 +87,7 @@ export default function SiteNavClient({ initialLocale }: Props) {
                 } text-zinc-800 bg-none border-none cursor-pointer`}
               >
                 {t("links.feedback")}
-              </button>
+              </Link>
             </div>
 
             {/* Language toggle */}
