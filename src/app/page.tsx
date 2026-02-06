@@ -3,7 +3,8 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import SiteNav from "../components/site-nav";
 import ScrollReveal from "../components/scroll-reveal";
-import { FaAndroid, FaApple } from "react-icons/fa";
+import { FaAndroid, FaApple, FaLinkedin } from "react-icons/fa";
+import { SiXiaohongshu } from "react-icons/si";
 
 export default async function Home() {
   const t = await getTranslations("home");
@@ -224,11 +225,37 @@ export default async function Home() {
 
       {/* ==================== FOOTER ==================== */}
       <footer className="py-8 border-t border-border/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2 font-medium text-foreground/80">
-            <Image src="/bun-icon.png" alt="Blotz" width={20} height={20} className="h-5 w-5" />
-            Blotz
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2 font-medium text-foreground/80">
+              <Image src="/bun-icon.png" alt="Blotz" width={20} height={20} className="h-5 w-5" />
+              Blotz
+            </div>
+
+            {/* Vertical Divider */}
+            <div className="h-4 w-px bg-border/60"></div>
+
+            <div className="flex gap-5">
+              <Link
+                href="https://www.xiaohongshu.com/user/profile/67bc12d6000000000e01f09a"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground hover:transition-all duration-300"
+              >
+                 <SiXiaohongshu className="w-6 h-6" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/blotz-app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground hover:transition-all duration-300"
+              >
+                 <FaLinkedin className="w-5 h-5" />
+              </Link>
+
+            </div>
           </div>
+
           <div className="flex items-center gap-4">
             <Link
               href="/privacy-policy"
