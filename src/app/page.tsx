@@ -100,14 +100,14 @@ export default async function Home() {
                     </span>
                   </div>
 
-                  <div className="mb-4 overflow-hidden rounded-2xl bg-gray-100">
+                  <div className="mb-6 overflow-hidden rounded-2xl">
                     <video
                       src="/videos/calendar-page-video.mp4"
                       autoPlay
                       muted
                       loop
                       playsInline
-                      className="w-full h-96 object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
 
