@@ -29,5 +29,13 @@
   "feature3Description": "Feeling overwhelmed? Let AI split large tasks into smaller, manageable steps so you can start without the stress.",
   "feedbackTitle": "We Want to Hear from You",
   "feedbackSubtitle": "Help us improve Blotz by sharing your ideas and feedback. Your input shapes the future of AI-powered task management.",
-  "feedbackButton": "Share Your Feedback"
+  "feedbackButton": "Share Your Feedback",
+  "socialTitle": "Connect with Us",
+  "socialSubtitle": "Join our community on social media to get the latest updates, tips, and share your experience with Blotz.",
+  "socialXhsTitle": "RedNote",
+  "socialXhsDesc": "Follow us on RedNote for more ADHD productivity tips and community stories!",
+  "socialXhsBadge": "Follow on RedNote",
+  "socialLinkedinTitle": "LinkedIn",
+  "socialLinkedinDesc": "Connect with us on LinkedIn for company news, professional insights, and career opportunities.",
+  "socialLinkedinBadge": "Follow on LinkedIn"
 }
