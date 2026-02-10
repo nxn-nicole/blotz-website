@@ -223,8 +223,84 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ==================== SOCIAL MEDIA ==================== */}
+      <section id="socialmedia" className="py-12 lg:py-20 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 overflow-hidden relative">
+        {/* Subtler decorative elements for this section */}
+        <div className="absolute inset-0 pointer-events-none opacity-20">
+          <div className="absolute top-[20%] right-[10%] w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-[20%] left-[10%] w-32 h-32 bg-secondary/20 rounded-full blur-3xl" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <ScrollReveal animation="fade">
+              <h2 className="text-4xl sm:text-5xl font-black mb-4">
+                {t("socialTitle")}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={100} animation="fade">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {t("socialSubtitle")}
+              </p>
+            </ScrollReveal>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+              <ScrollReveal delay={200} animation="scale">
+                <Link
+                  href="https://www.xiaohongshu.com/user/profile/67bc12d6000000000e01f09a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex flex-col items-center text-center p-8 bg-white/70 backdrop-blur-md rounded-[2.5rem] border border-white/40 shadow-xl hover:shadow-2xl hover:shadow-[#ff2442]/5 transition-all duration-500 overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff2442]/5 rounded-bl-full translate-x-8 -translate-y-8 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-500" />
+                  
+                  <div className="mb-6 relative">
+                    <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#ff2442]/10 text-[#ff2442] group-hover:bg-[#ff2442] group-hover:text-white group-hover:-rotate-6 transition-all duration-500 shadow-inner">
+                      <SiXiaohongshu className="w-9 h-9" />
+                    </div>
+                  </div>
+                  
+                  <h4 className="text-xl font-black text-foreground mb-2">{t("socialXhsTitle")}</h4>
+                  <p className="text-sm text-muted-foreground mb-6">{t("socialXhsDesc")}</p>
+                  
+                  <span className="text-xs font-bold px-4 py-2 bg-[#ff2442]/10 text-[#ff2442] rounded-full group-hover:bg-[#ff2442] group-hover:text-white transition-all duration-500">
+                    {t("socialXhsBadge")}
+                  </span>
+                </Link>
+              </ScrollReveal>
+
+              <ScrollReveal delay={300} animation="scale">
+                <Link
+                  href="https://www.linkedin.com/company/blotz-app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex flex-col items-center text-center p-8 bg-white/70 backdrop-blur-md rounded-[2.5rem] border border-white/40 shadow-xl hover:shadow-2xl hover:shadow-[#0077b5]/5 transition-all duration-500 overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#0077b5]/5 rounded-bl-full translate-x-8 -translate-y-8 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-500" />
+
+                  <div className="mb-6 relative">
+                    <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#0077b5]/10 text-[#0077b5] group-hover:bg-[#0077b5] group-hover:text-white group-hover:-rotate-6 transition-all duration-500 shadow-inner">
+                      <FaLinkedin className="w-8 h-8" />
+                    </div>
+                  </div>
+                  
+                  <h4 className="text-xl font-black text-foreground mb-2">{t("socialLinkedinTitle")}</h4>
+                  <p className="text-sm text-muted-foreground mb-6">{t("socialLinkedinDesc")}</p>
+                  
+                  <span className="text-xs font-bold px-4 py-2 bg-[#0077b5]/10 text-[#0077b5] rounded-full group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-500">
+                    {t("socialLinkedinBadge")}
+                  </span>
+                </Link>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ==================== FOOTER ==================== */}
-      <footer className="py-8 border-t border-border/50">
+      <footer id="footer" className="py-8 border-t border-border/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 font-medium text-foreground/80">
@@ -232,28 +308,7 @@ export default async function Home() {
               Blotz
             </div>
 
-            {/* Vertical Divider */}
-            <div className="h-4 w-px bg-border/60"></div>
-
-            <div className="flex gap-5">
-              <Link
-                href="https://www.xiaohongshu.com/user/profile/67bc12d6000000000e01f09a"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground hover:transition-all duration-300"
-              >
-                 <SiXiaohongshu className="w-6 h-6" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/blotz-app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground hover:transition-all duration-300"
-              >
-                 <FaLinkedin className="w-5 h-5" />
-              </Link>
-
-            </div>
+            
           </div>
 
           <div className="flex items-center gap-4">

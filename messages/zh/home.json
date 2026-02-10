@@ -29,5 +29,13 @@
   "feature3Description": "感到不知所措？让 AI 将大任务拆分成更小、更易管理的步骤，轻松开始。",
   "feedbackTitle": "我们想听听你的想法",
   "feedbackSubtitle": "通过分享你的想法和反馈来帮助我们改进 Blotz。你的意见将塑造 AI 任务管理的未来。",
-  "feedbackButton": "分享你的反馈"
+  "feedbackButton": "分享你的反馈",
+  "socialTitle": "关注我们",
+  "socialSubtitle": "加入我们的社交媒体社区，获取最新资讯、技巧，并分享你的 Blotz 使用体验。",
+  "socialXhsTitle": "小红书",
+  "socialXhsDesc": "关注我们在小红书上的分享，获取更多 ADHD 提效小贴士和社区故事！",
+  "socialXhsBadge": "关注",
+  "socialLinkedinTitle": "LinkedIn",
+  "socialLinkedinDesc": "在 LinkedIn 上关注我们，获取公司动态、专业见解和职业机会。",
+  "socialLinkedinBadge": "关注"
 }

@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import { FaLinkedin } from "react-icons/fa";
+import { SiXiaohongshu } from "react-icons/si";
 
 type Props = {
   initialLocale: "en" | "zh";
@@ -87,6 +89,22 @@ export default function SiteNavClient({ initialLocale }: Props) {
                 } text-zinc-800 bg-none border-none cursor-pointer`}
               >
                 {t("links.feedback")}
+              </Link>
+              <Link
+                href="/#footer"
+                onClick={(e) => {
+                  if (pathname === "/") {
+                    e.preventDefault();
+                    document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className={`px-2 py-1 transition-all duration-300 hover:text-secondary hover:scale-105 active:scale-95 ${
+                  language === "zh"
+                    ? "text-base font-bold tracking-normal chinese-text"
+                    : "font-mono text-sm uppercase font-bold tracking-tight"
+                } text-zinc-800 bg-none border-none cursor-pointer`}
+              >
+                {t("links.social")}
               </Link>
             </div>
 
