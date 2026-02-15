@@ -44,24 +44,24 @@ export default async function Home() {
               {t("subtitleLine1")} {t("subtitleLine2")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">
               <a
                 href="https://testflight.apple.com/join/juXbBxHN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-primary rounded-3xl font-black shadow-xl active:scale-95 group btn-hover-glow hover:shadow-2xl transition-all border-2 border-white"
+                className="flex w-52 sm:w-64 items-center justify-center pl-12 sm:pl-14 py-3 sm:py-4 bg-white text-primary rounded-3xl font-black shadow-xl active:scale-95 group btn-hover-glow hover:shadow-2xl transition-all border-2 border-white relative"
               >
-                <FaApple className="text-2xl leading-none shrink-0 transition-transform group-hover:-translate-y-1" />
-                <span className="text-lg font-black tracking-tight">App Store</span>
+                <FaApple className="absolute left-12 sm:left-16 text-xl sm:text-2xl leading-none shrink-0 transition-transform group-hover:-translate-y-1" />
+                <span className="flex-1 text-center font-sans text-lg font-black tracking-tight">App Store</span>
               </a>
               <a
                 href="https://www.pgyer.com/blotztask"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-primary rounded-3xl font-black shadow-xl active:scale-95 group btn-hover-glow hover:shadow-2xl transition-all border-2 border-white"
+                className="flex w-52 sm:w-64 items-center justify-center pl-12 sm:pl-14 py-3 sm:py-4 bg-white text-primary rounded-3xl font-black shadow-xl active:scale-95 group btn-hover-glow hover:shadow-2xl transition-all border-2 border-white relative"
               >
-                <FaAndroid className="text-2xl leading-none shrink-0 transition-transform group-hover:-translate-y-1" />
-                <span className="text-lg font-black tracking-tight">Android</span>
+                <FaAndroid className="absolute left-12 sm:left-16 text-xl sm:text-2xl leading-none shrink-0 transition-transform group-hover:-translate-y-1" />
+                <span className="flex-1 text-center font-sans text-lg font-black tracking-tight">Android</span>
               </a>
             </div>
           </div>
