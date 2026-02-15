@@ -265,7 +265,7 @@ export default async function Home() {
                   <h4 className="text-xl font-black text-foreground mb-2">{t("socialXhsTitle")}</h4>
                   <p className="text-sm text-muted-foreground mb-6">{t("socialXhsDesc")}</p>
                   
-                  <span className="text-xs font-bold px-4 py-2 bg-[#ff2442]/10 text-[#ff2442] rounded-full group-hover:bg-[#ff2442] group-hover:text-white transition-all duration-500">
+                  <span className="text-lg font-bold px-4 py-2 bg-[#ff2442]/10 text-[#ff2442] rounded-full group-hover:bg-[#ff2442] group-hover:text-white transition-all duration-500">
                     {t("socialXhsBadge")}
                   </span>
                 </Link>
@@ -289,7 +289,7 @@ export default async function Home() {
                   <h4 className="text-xl font-black text-foreground mb-2">{t("socialLinkedinTitle")}</h4>
                   <p className="text-sm text-muted-foreground mb-6">{t("socialLinkedinDesc")}</p>
                   
-                  <span className="text-xs font-bold px-4 py-2 bg-[#0077b5]/10 text-[#0077b5] rounded-full group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-500">
+                  <span className="text-lg font-bold px-4 py-2 bg-[#0077b5]/10 text-[#0077b5] rounded-full group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-500">
                     {t("socialLinkedinBadge")}
                   </span>
                 </Link>
