@@ -51,13 +51,13 @@ export default function SiteNavClient({ initialLocale }: Props) {
   return (
     <>
       <nav
-        className={`fixed z-50 transition-all duration-500 border border-zinc-200/50 shadow-premium ${
+        className={`fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1) border border-zinc-200/50 shadow-premium will-change-[top,width,border-radius] ${
           isPastHero
-            ? "top-0 left-0 translate-x-0 w-full rounded-none bg-white/95 backdrop-blur-2xl py-0 md:top-6 md:left-1/2 md:-translate-x-1/2 md:w-[95%] md:max-w-5xl md:rounded-full"
-            : "top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl rounded-full bg-white/90 backdrop-blur-xl py-0"
+            ? "top-0 w-full max-w-none rounded-[0rem] bg-white/95 backdrop-blur-2xl py-0"
+            : "top-6 w-[95%] max-w-5xl rounded-[2rem] bg-white/90 backdrop-blur-xl py-0"
         }`}
       >
-        <div className="px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-[52px]">
             {/* Logo */}
             <Link
@@ -177,10 +177,10 @@ export default function SiteNavClient({ initialLocale }: Props) {
 
       {/* Mobile Menu Dropdown - Card Style */}
       <div
-        className={`fixed z-50 transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1) sm:hidden overflow-hidden border border-zinc-200/50 shadow-premium ${
+        className={`fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1) sm:hidden overflow-hidden border border-zinc-200/50 shadow-premium will-change-[top,width,border-radius] ${
           isPastHero
-            ? "top-[52px] left-0 w-full rounded-none"
-            : "top-[calc(1.5rem+52px+8px)] left-1/2 -translate-x-1/2 w-[95%] max-w-5xl rounded-[2rem]"
+            ? "top-[52px] w-full rounded-[0rem]"
+            : "top-[calc(1.5rem+52px+8px)] w-[95%] max-w-5xl rounded-[2rem]"
         } ${
           isMenuOpen 
             ? "max-h-[400px] opacity-100" 
