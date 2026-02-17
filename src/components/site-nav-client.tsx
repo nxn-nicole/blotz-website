@@ -51,9 +51,9 @@ export default function SiteNavClient({ initialLocale }: Props) {
   return (
     <>
       <nav
-        className={`fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1) border border-zinc-200/50 shadow-premium will-change-[top,width,border-radius] ${
+        className={`fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border border-zinc-200/50 shadow-premium will-change-[top,width,max-width,border-radius] ${
           isPastHero
-            ? "top-0 w-full max-w-none rounded-[0rem] bg-white/95 backdrop-blur-2xl py-0"
+            ? "top-0 w-full max-w-full rounded-[0rem] bg-white/95 backdrop-blur-2xl py-0"
             : "top-6 w-[95%] max-w-5xl rounded-[2rem] bg-white/90 backdrop-blur-xl py-0"
         }`}
       >
