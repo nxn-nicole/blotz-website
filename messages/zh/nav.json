@@ -3,10 +3,10 @@
     "home": "首页",
     "features": "功能",
     "feedback": "反馈",
-    "social": "关注我们"
+    "social": "关注"
   },
   "language": {
-    "label": "网站语言",
+    "label": "语言",
     "english": "英文",
     "chinese": "中文"
   }
