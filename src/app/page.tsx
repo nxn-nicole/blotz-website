@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import SiteNav from "../components/site-nav";
 import ScrollReveal from "../components/scroll-reveal";
 import { FaAndroid, FaApple, FaLinkedin } from "react-icons/fa";
 import { SiXiaohongshu } from "react-icons/si";
 
 export default async function Home() {
+  const locale = await getLocale();
   const t = await getTranslations("home");
+  const isEn = locale === "en";
 
   return (
     <div className="min-h-screen">
@@ -102,7 +104,7 @@ export default async function Home() {
 
                   <div className="mb-6 overflow-hidden rounded-2xl">
                     <video
-                      src="/videos/calendar-page-video.mp4"
+                      src={isEn ? "/videos/calendar-page-video-en.MP4" : "/videos/calendar-page-video.mp4"}
                       autoPlay
                       muted
                       loop
@@ -136,7 +138,7 @@ export default async function Home() {
 
                   <div className="mb-6 overflow-hidden rounded-2xl">
                     <video
-                      src="/videos/star-spark-video.mp4"
+                      src={isEn ? "/videos/star-spark-video-en.MP4" : "/videos/star-spark-video.mp4"}
                       autoPlay
                       muted
                       loop
@@ -170,7 +172,7 @@ export default async function Home() {
 
                   <div className="mb-6 overflow-hidden rounded-2xl">
                     <video
-                      src="/videos/break-down-video.mp4"
+                      src={isEn ? "/videos/break-down-video-en.MP4" : "/videos/break-down-video.mp4"}
                       autoPlay
                       muted
                       loop
