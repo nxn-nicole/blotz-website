@@ -104,7 +104,7 @@ export default async function Home() {
 
                   <div className="mb-6 overflow-hidden rounded-2xl">
                     <video
-                      src={isEn ? "/videos/calendar-page-video-en.MP4" : "/videos/calendar-page-video.mp4"}
+                      src={isEn ? "/videos/calendar-page-video-en.mp4" : "/videos/calendar-page-video.mp4"}
                       autoPlay
                       muted
                       loop
@@ -138,7 +138,7 @@ export default async function Home() {
 
                   <div className="mb-6 overflow-hidden rounded-2xl">
                     <video
-                      src={isEn ? "/videos/star-spark-video-en.MP4" : "/videos/star-spark-video.mp4"}
+                      src={isEn ? "/videos/star-spark-video-en.mp4" : "/videos/star-spark-video.mp4"}
                       autoPlay
                       muted
                       loop
@@ -172,7 +172,7 @@ export default async function Home() {
 
                   <div className="mb-6 overflow-hidden rounded-2xl">
                     <video
-                      src={isEn ? "/videos/break-down-video-en.MP4" : "/videos/break-down-video.mp4"}
+                      src={isEn ? "/videos/break-down-video-en.mp4" : "/videos/break-down-video.mp4"}
                       autoPlay
                       muted
                       loop
