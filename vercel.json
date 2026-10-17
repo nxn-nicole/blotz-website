@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/privacy-policy", "destination": "https://www.blotztask.com/en/privacy/", "permanent": true },
+    { "source": "/feedback", "destination": "https://www.blotztask.com/en/feedback/", "permanent": true },
+    { "source": "/(.*)", "destination": "https://www.blotztask.com/", "permanent": true }
+  ]
+}
